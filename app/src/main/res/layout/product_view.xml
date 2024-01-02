@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/showPImage"
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_add_a_photo_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/showPName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Product Name"
+            app:layout_constraintEnd_toEndOf="@+id/showPImage"
+            app:layout_constraintStart_toStartOf="@+id/showPImage"
+            app:layout_constraintTop_toBottomOf="@id/showPImage" />
+
+        <TextView
+            android:id="@+id/showPPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="₹ "
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/showPName"
+            app:layout_constraintStart_toStartOf="@+id/showPName"
+            app:layout_constraintTop_toBottomOf="@+id/showPName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/butProductBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Buy"
+            android:textColor="@color/white"
+            android:backgroundTint="#00897B"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/showPImage"
+            app:layout_constraintStart_toStartOf="@+id/showPImage"
+            app:layout_constraintTop_toBottomOf="@+id/showPPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

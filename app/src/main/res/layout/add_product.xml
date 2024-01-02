@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Your Product"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/productNameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Your product name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/productPriceET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Your product price"
+        app:layout_constraintEnd_toEndOf="@+id/productNameET"
+        app:layout_constraintStart_toStartOf="@+id/productNameET"
+        app:layout_constraintTop_toBottomOf="@+id/productNameET" />
+
+    <TextView
+        android:id="@+id/chooseProductImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" Choose product image"
+        android:textSize="16sp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/baseline_add_a_photo_24"
+        app:layout_constraintEnd_toEndOf="@+id/productPriceET"
+        app:layout_constraintStart_toStartOf="@+id/productPriceET"
+        app:layout_constraintTop_toBottomOf="@+id/productPriceET" />
+
+    <TextView
+        android:id="@+id/productLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:maxLines="1"
+        android:textColor="#096DC4"
+        app:layout_constraintEnd_toEndOf="@+id/chooseProductImage"
+        app:layout_constraintStart_toStartOf="@+id/chooseProductImage"
+        app:layout_constraintTop_toBottomOf="@id/chooseProductImage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/productSubmitBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Submit"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/google_btn_shape"
+        app:layout_constraintEnd_toEndOf="@+id/chooseProductImage"
+        app:layout_constraintStart_toStartOf="@+id/chooseProductImage"
+        app:layout_constraintTop_toBottomOf="@+id/productLink" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
